@@ -32,7 +32,7 @@ Helper = {
 
 			// IE
 			newfile.onreadystatechange = function() {
-			console.log("Loading a js IE");
+				console.log("Loading a js IE");
 				if (newfile.readyState === 'loaded' || newfile.readyState === 'complete') {
 					callback();
 				}
@@ -40,7 +40,7 @@ Helper = {
 
 			// others
 			newfile.onload = function () {
-			console.log("Loading a js Chrome");
+				console.log("Loading a js Chrome");
 				callback();
 			};
 
@@ -50,6 +50,82 @@ Helper = {
 		
         return true;
     },
+	insertNavObject: function(data, placement) {
+		if (typeof data.anchor !== 'undefined') {
+			var li = document.createElement('li');
+			var a = document.createElement('a');
+			
+			a.innerHTML = data.name;
+			a.href = data.anchor;
+			a.onclick = function() {
+				
+			}
+			
+			li.appendChild(a);
+			placement.appendChild(li);
+		}
+	},
+	loadNav: function(data, placement) {
+		var myNavDiv = document.getElementById(placement);
+		var bsContainer = document.createElement('div');
+		var myNav = document.createElement('nav');
+		var headerDiv = document.createElement('div');
+		var button = document.createElement('button');
+		var span1 = document.createElement('span');
+		var span2 = document.createElement('span');
+		var span3 = document.createElement('span');
+		var span4 = document.createElement('span');
+		var elementDiv = document.createElement('div');
+		var elementList = document.createElement('ul');
+		
+		myNavDiv.innerHTML = ''; // clear it;
+		
+		bsContainer.className = 'container';
+		
+		myNav.className = 'navbar navbar-default navbar-fixed-top';
+		myNav.setAttribute('role', 'navigation');
+		
+		headerDiv.className ='navbar-header';
+		
+		button.type = 'button';
+		button.className = 'navbar-toggle collapsed';
+		button.dataset.toggle = 'collapse';
+		button.dataset.target = '#bs-nav';
+		button.setAttribute('aria-expanded', false);
+		
+		span1.className = 'sr-only';
+		span2.className = 'icon-bar';
+		span3.className = 'icon-bar';
+		span4.className = 'icon-bar';
+		
+		button.appendChild(span1);
+		button.appendChild(span2);
+		button.appendChild(span3);
+		button.appendChild(span4);
+		
+		headerDiv.appendChild(button);
+		
+		elementDiv.className = 'collapse navbar-collapse';
+		elementDiv.id = 'bs-nav';
+		
+		elementList.className = 'nav navbar-nav navbar-right';
+		
+		// Should be a JSON array
+		if (data.constructor === Array) {
+			for (var i = 0; i < data.length; i++)
+				this.insertNavObject(data[i], elementList);
+		} else if (data.constructor === Object){
+			this.insertNavObject(data, elementList);
+		} else {
+			console.error('the data is not properly formatted');
+		}
+		
+		elementDiv.appendChild(elementList);
+		bsContainer.appendChild(headerDiv);
+		bsContainer.appendChild(elementDiv);
+		myNav.appendChild(bsContainer);
+		myNavDiv.appendChild(myNav);
+	},
     loadBody: function(url, placement) {
 		var helper = this;
 		

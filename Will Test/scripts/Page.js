@@ -17,11 +17,4 @@ var Page = function (elementId, options) {
 				this.server[key] = options[key];
 		}
 	}
-	
-	this.addElement = function(tagName) {
-		var element = document.createElement(tagName);
-		this.placement.appendChild(element);
-		
-		return element;
-	}
 };

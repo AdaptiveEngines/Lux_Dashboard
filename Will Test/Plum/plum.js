@@ -1,4 +1,11 @@
+var header;
+var nav;
+var footer;
+
+var header_options;
+var nav_options;
+var footer_options;
+
 window.onload = function() {
-	var test = new Landing('Page');
-	console.log(test);
+	nav = new Nav('nav', nav_options);
 }
