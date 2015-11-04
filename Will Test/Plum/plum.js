@@ -8,4 +8,6 @@ var footer_options;
 
 window.onload = function() {
 	nav = new Nav('nav', nav_options);
+	
+	Helper.loadBody('landing', 'Page');
 }
