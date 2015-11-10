@@ -1,0 +1,22 @@
+{
+	 "placement" : "UserAccounts"
+	,"main_section_params" :{
+		 "save_button_callback" : "Server.UserAccounts.Save"
+		,"fields" : [
+			{
+				 "name" : "_id"
+				,"field_name" : "_id"
+				,"type" : "_id"
+				,"required" : "true"
+				,"hidden" : "true"
+				,"exclude_if_blank" : "true"
+			 }
+		]
+	}
+	,"nav_params" : {
+		 "allow_remove" : "false"
+		,"allow_rename" : "false"
+		,"allow_filter_field" : "username"
+		,"query_callback" : "Server.UserAccounts.Query"
+	}
+}

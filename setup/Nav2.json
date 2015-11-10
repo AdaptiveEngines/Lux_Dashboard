@@ -1,0 +1,124 @@
+[
+	 /*{
+		 name: // Name that appears on top of page (header) and on hover
+		,base : // base name for files/anchor
+		,css : // base + .css (only include if overwritting, can be an array for multiple imports)
+		,js :// base + .js (only include if overwritting, can be an array for multiple imports)
+		,html:// base + .html (only include if overwritting, can be an array for multiple imports)
+		,icon:// base + .ico (only include if overwritting, can be an array for multiple imports)
+		,anchor: // # + base (only include if overwritting, can be an array for multiple imports)
+		,description : // a description of the page that appears under the Heading 
+		,elements : [] // array of subelements, these are more of the same thing
+				// if elements is involved, this doesn't go anywhere
+	 }*/
+	 {
+		 name: "Management Section"
+		,base: "management"
+		,description: "All standard Management Items"
+		,elements : [
+				 {
+					 name: "File Management"
+					,base: "FileManagement"
+					,description : "" 
+				 }
+				,{
+					 name: "Asset Management"
+					,base: "AssetManagement"
+					,description : "" 
+				 }
+				,{
+					 name: "Content Management"
+					,base: "ContentManagement"
+					,description : "" 
+				 }
+				,{
+					 name: "External OAuth Clients"
+					,base: "ExOAuthClients"
+					,description : "" 
+				 }
+			]
+	 } 
+	,{
+		 name: "Plum"
+		,base : "plum"
+		,description: "Elements Specific to Plum Project"
+		,elements : [
+				 {
+					 name: "Prize Management"
+					,base: "PrizeManagement"
+					,description : "" 
+				 }
+				,{
+					 name: "Plum Analytics"
+					,base: "Analytics"
+					,description : "" 
+				 }
+				,{
+					 name: "Plum Advertisements"
+					,base: "AdManagement"
+					,description : "" 
+				 }
+				,{
+					 name: "Plum Barter System"
+					,base: ""
+					,description : "" 
+				 }
+			]
+	 }
+	,{
+		 name: "System"
+		,elements : [
+				 {
+					 name: "System Rules"
+					,base: "SystemRules"
+					,description : "" 
+				 }
+				,{
+					 name: "System Providers"
+					,base: "APIProviderManagement"
+					,description : "" 
+				 }
+				,{
+					 name: "System Contact Information"
+					,base: "ContactManagement"
+					,description : "" 
+				 }
+				,{
+					 name: "System Mailing"
+					,base: "MailingManagement"
+					,description : "" 
+				 }
+			]
+	 }
+	,{
+		 name: "Analytics"
+		,base : "Analytics"
+		,description : ""
+	 }
+	,{
+		 name: "User"
+		,elements : [
+				 {
+					 name: "User Scoreboard"
+					,base: "ScoreboardManagement"
+					,description: ""
+				 }
+				,{
+					 name: "User Analytics"
+					,base: "UserAnalytics"
+					,description : "" 
+				 }
+				,{
+					 name: "User Account Management"
+					,base: "UserAccounts"
+					,description : "" 
+				 }
+			]
+	 }
+	,{
+		 name: "Orders"
+		,base : "OrderManagement"
+		,description : ""
+	 }
+	
+]

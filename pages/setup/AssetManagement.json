@@ -1,0 +1,22 @@
+{
+	 "placement" : "AssetManagement"
+	,"main_section_params" :{
+		 "save_button_callback" : "Server.AssetManagement.Save"
+		,"allow_arbitrary_fields" : "true"
+		,"fields" : [
+			{
+				 "name" : "_id"
+				,"field_name" : "_id"		
+				,"type" : "_id"
+				,"required" : "true"
+				,"hidden" : "true"
+				,"exclude_if_blank" : "true"
+			 }
+		]
+	}
+	,"nav_params" : {
+		 "remove_button_callback" : "Server.AssetManagement.Remove"
+		,"rename_button_callback" : "Server.AssetManagement.Rename"
+		,"query_callback" : "Server.AssetManagement.Query"
+	}
+}

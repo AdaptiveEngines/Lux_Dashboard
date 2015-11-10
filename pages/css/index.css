@@ -1,0 +1,31 @@
+body {
+	/* Fixed top bar requires padding */
+	padding-top: 50px;
+}
+
+#index {
+
+/*
+ * This is where you can customize the size of the
+ * or any other overarching parameters that are not 
+ * customizd in the AssetManagement.css
+ *
+ */ 
+
+}
+
+/*
+ * Since this file is the last to be included on the current Page, 
+ * It can be used to overwrite any elements on that page
+ * to customize their apperance for this page only.
+ *
+ */
+
+/*
+ * The best way to change behavior inside any given class 
+ * is going to be to target elements inside with specific 
+ * query selectors: .className div {}  | .className a {}
+ * so that the javascript is not littered with classNames. 
+ */
+
+

@@ -1,0 +1,17 @@
+{
+	 "placement" : "UserAnalytics"
+	,"main_section_lib" : "AnalyticsMain"
+	,"main_section_params" :{
+		"fields" : [
+			{
+			}
+		]
+	}
+	,"nav_params" : {
+		 "allow_remove" : "false"
+		,"allow_rename" : "false"
+		,"allow_filter_field" : "username"
+		,"allow_local_export" : "false"
+		,"query_callback" : "Server.UserAnalytics.Query"
+	}
+}

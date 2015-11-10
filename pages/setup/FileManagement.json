@@ -1,0 +1,21 @@
+{
+	 "placement" : "FileManagement"
+	,"main_section_params" :{
+		 "save_button_callback" : "Server.FileManagement.Save"
+		,"fields" : [
+			{
+				 "name" : "_id"
+				,"field_name" : "_id"
+				,"type" : "_id"
+				,"required" : "true"
+				,"hidden" : "true"
+				,"exclude_if_blank" : "true"
+			 }
+		]
+	}
+	,"nav_params" : {
+		 "remove_button_callback" : "Server.FileManagement.Remove"
+		,"rename_button_callback" : "Server.FileManagement.Rename"
+		,"query_callback" : "Server.FileManagement.Query"
+	}
+}
