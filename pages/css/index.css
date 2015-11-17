@@ -3,6 +3,14 @@ body {
 	padding-top: 50px;
 }
 
+ul.nav-sidebar > ul {
+	margin-left: 2em;
+}
+
+div.sidebar {
+	background-color: #f2f2f2;
+}
+
 #index {
 
 /*

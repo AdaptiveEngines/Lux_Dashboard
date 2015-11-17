@@ -1,0 +1,20 @@
+[
+	{
+		"email": "a@b.com"
+		,"id": "alpha"
+		,"recipients": [
+			"b@c.com"
+			,"c@d.com"
+			,"d@e.com"
+		]
+	}
+	,{
+		"email": "f@g.com"
+		,"id": "figaro"
+		,"recipients": [
+			"f@t.com"
+			,"s@e.com"
+			,"t@z.com"
+		]
+	}
+]
