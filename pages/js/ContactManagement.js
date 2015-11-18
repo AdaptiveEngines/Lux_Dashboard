@@ -18,8 +18,11 @@ var PageObject = function(params){
 	// I got stuck for awhile and found out I was passing a null value...
 	this.sendMail = function(email_id, recipients, sender){};
 	this.getEmailList = function(path){ // dummy data for now..
-		Helper.Ajax(path, {}, function(){
+		Helper.loadHTML(path, function(data){
+			var myData = JSON.parse(data);
 			var leftside = document.getElementById("leftside");
+			var div = document.createElement("div");
+			var ul = document.createElement("ul");
 		
 			if (leftside == null) {
 				leftside = document.createElement("nav");
@@ -31,6 +34,53 @@ var PageObject = function(params){
 			} else {
 				while (leftside.childNodes.length > 0)
 					leftside.removeChild(leftside.childNodes[0]);
+			}
+			
+			leftside.appendChild(div);
+			div.appendChild(ul);
+			div.className = "col-sm-3 col-md-2 sidebar";
+			ul.className = "nav nav-sidebar";
+			
+			for (var i = 0; i < myData.length; i++) {
+				var li = document.createElement("li");
+				var a = document.createElement("a");
+				
+				ul.appendChild(li);
+				li.appendChild(a);
+				
+				// Hiding my data inside my element
+				a.style.cursor = "pointer";
+				a.email = myData[i].email;
+				a.recipients = myData[i].recipients;
+				
+				a.onclick = function() {
+					var form = document.createElement("form");
+					var emailIdLabel = document.createElement("label");
+					var senderLabel = document.createElement("label");
+					var emailId = document.createElement("input");
+					var sender = document.createElement("input");
+					
+					page.insertBefore(form, leftside.nextSibling);
+					form.appendChild(emailIdLabel);
+					form.appendChild(senderLabel);
+					emailIdLabel.appendChild(document.createTextNode("Email ID "));
+					emailIdLabel.appendChild(emailId);
+					senderLabel.appendChild(document.createTextNode("Sender "));
+					senderLabel.appendChild(sender);
+					
+					emailIdLabel.style.display = "block";
+					senderLabel.style.display = "block";
+					
+					emailId.value = this.innerHTML;
+					sender.value = this.email;
+					
+					console.log("hi?");
+					console.log(this.email);
+					console.log(this.recipients);
+				};
+				a.appendChild(document.createTextNode(myData[i].id));
+				
+				//li.appendChild(document.createTextNode(myData[i].id));
 			}
 		});
 	};
@@ -49,7 +99,7 @@ Helper.loadHTML('pages/setup/'+scriptName+'.json', function(data){
 	// inherit Static functionailty
 	PageObject.prototype = new AssetManagementLib(setup_params);	
 	var pageObject = new PageObject(setup_params);
-	pageObject.getEmailList("/dummy.json");
+	pageObject.getEmailList("./dummy.json");
 });
 
 // Create a new instance of the Class
