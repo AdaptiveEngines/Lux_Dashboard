@@ -13,27 +13,6 @@ var PageObject = function(params){
  *	Use `var _variable = ""` to make them private.
  * 	
   	*/
-	var page = document.getElementById(params.placement);
-	
-	// I got stuck for awhile and found out I was passing a null value...
-	this.sendMail = function(email_id, recipients, sender){};
-	this.getEmailList = function(path){ // dummy data for now..
-		Helper.Ajax(path, {}, function(){
-			var leftside = document.getElementById("leftside");
-		
-			if (leftside == null) {
-				leftside = document.createElement("nav");
-
-				if (page.firstChild != null)
-					page.insertBefore(leftside, page.firstChild);
-				else
-					page.appendChild(leftside);
-			} else {
-				while (leftside.childNodes.length > 0)
-					leftside.removeChild(leftside.childNodes[0]);
-			}
-		});
-	};
 };
 
 
@@ -49,7 +28,6 @@ Helper.loadHTML('pages/setup/'+scriptName+'.json', function(data){
 	// inherit Static functionailty
 	PageObject.prototype = new AssetManagementLib(setup_params);	
 	var pageObject = new PageObject(setup_params);
-	pageObject.getEmailList("/dummy.json");
 });
 
 // Create a new instance of the Class
