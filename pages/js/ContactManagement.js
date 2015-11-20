@@ -26,7 +26,7 @@ var scriptName = scriptNameArray[scriptNameArray.length-1].split(".")[0];
 Helper.loadHTML('pages/setup/'+scriptName+'.json', function(data){
 	var setup_params = JSON.parse(data, Helper.callbackStr2FunctionRef);
 	// inherit Static functionailty
-	PageObject.prototype = new AssetManagementLib(setup_params);	
+	//PageObject.prototype = new AssetManagementLib(setup_params);	
 	var pageObject = new PageObject(setup_params);
 });
 
