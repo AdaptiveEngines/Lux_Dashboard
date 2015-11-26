@@ -6,11 +6,54 @@
 			{
 				 "name" : "_id"
 				,"field_name" : "_id"
+				,"description" : "Mongo Identifier"
 				,"type" : "_id"
 				,"required" : "true"
 				,"hidden" : "true"
 				,"exclude_if_blank" : "true"
 			 }
+			,{
+				 "name" : "Field Name"
+				,"field_name" : "field_name"
+				,"description": "Identifier Field"
+				,"type" : "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank" : "true"
+			 }
+			,{
+				 "name" : "Content"
+				,"field_name" : "content"
+				,"description": "Content for this section"
+				,"type" : ""
+				,"required" : "false"
+				,"hidden" : "true"
+				,"exclude_if_blank" : "true"
+				,"subFields": [
+					 {
+						 "name" : "Content Full"
+						,"field_name" : "content.full"
+						,"description": "Full Content"
+						,"type" : "text"
+						,"required" : "true"
+						,"hidden" : "false"
+						,"exclude_if_blank" : "true"
+					 }
+					,
+					 {
+						 "name" : "Content short"
+						,"field_name" : "content.short"
+						,"description": "Abbreviated Content"
+						,"type" : "text"
+						,"required" : "true"
+						,"hidden" : "false"
+						,"exclude_if_blank" : "true"
+					 }
+
+
+				]
+			 }	
+	
 		]
 	}
 	,"nav_params" : {
