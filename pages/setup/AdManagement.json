@@ -2,6 +2,8 @@
 	 "placement" : "AdManagement"
 	,"main_section_params" :{
 		 "save_button_callback" : "Server.AdManagement.Save"
+		,"asset_category" : "Adverts"
+		,"navigation_field" : "ad_id"
 		,"fields" : [
 			{
 				 "name" : "_id"
@@ -10,6 +12,42 @@
 				,"required" : "true"
 				,"hidden" : "true"
 				,"exclude_if_blank": "true"
+			 },
+			 {
+				 "name" : "Advertisement Id"
+				,"field_name" : "ad_id"	
+				,"description" : "A Unique identifier for this advertiser"	
+				,"type": "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank": "false"
+			 },
+			 {
+				 "name" : "Advertisement Text"
+				,"field_name" : "ad_text"	
+				,"description" : "Alternative description for advertisement"	
+				,"type": "text"
+				,"required" : "false"
+				,"hidden" : "false"
+				,"exclude_if_blank": "false"
+			 },
+			 {
+				 "name" : "Advertisement Image/Video File URL"
+				,"field_name" : "ad_url"	
+				,"description" : "The file or video to be shown for this advertisement"	
+				,"type": "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank": "false"
+			 },
+			 {
+				 "name" : "Advertisement Length"
+				,"field_name" : "ad_length"	
+				,"description" : "The Amount of time (in seconds) that a user must view an advertisement for before they are allowed to skip/close"	
+				,"type": "number"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank": "false"
 			 }
 		]
 	}

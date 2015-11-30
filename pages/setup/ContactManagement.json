@@ -2,6 +2,7 @@
 	 "placement" : "ContactManagement"
 	,"main_section_params" :{
 		 "save_button_callback" : "Server.ContactManagement.Save"
+		,"navigation_field" : "email_id"
 		,"fields" : [
 			{
 				 "name" : "_id"
@@ -10,6 +11,42 @@
 				,"required" : "true"
 				,"hidden" : "true"
 				,"exclude_if_blank" : "true"
+			 }
+			,{
+				 "name" : "Email Id"
+				,"field_name" : "email_id"	
+				,"description" : "The reference name for this email"	
+				,"type": "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank": "false"
+			 }
+			,{
+				 "name" : "Send To"
+				,"field_name" : "to"
+				,"description" :"Comma Seperated list of administrator emails who should recieve a notification"	
+				,"type": "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank": "false"
+			 }
+			,{
+				 "name" : "Subject"
+				,"field_name" : "subject"
+				,"description" :"The Subject line of the email being sent to administrators"
+				,"type": "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank": "false"
+			 }
+			,{
+				 "name" : "Message"
+				,"field_name" : "message"
+				,"description" :"The message that will be sent along with the email"	
+				,"type": "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank": "false"
 			 }
 		]
 	}

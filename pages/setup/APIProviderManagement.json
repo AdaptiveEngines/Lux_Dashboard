@@ -2,6 +2,7 @@
 	 "placement" : "APIProviderManagement"
 	,"main_section_params" :{
 		 "save_button_callback" : "Server.APIProviderManagement.Save"
+		,"navigation_field" : "provider_name"
 		,"fields" : [
 			{
 				 "name" : "_id"
@@ -11,11 +12,39 @@
 				,"hidden" : "true"
 				,"exclude_if_blank" : "true"
 			 }
+			,{
+				 "name" : "API Provider Name"
+				,"field_name" : "provider_name"	
+				,"description" : "A Unique identifier for this API Provider"	
+				,"type": "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank": "false"
+			 }
+			,{
+				 "name" : "URL 1"
+				,"field_name" : "url1"	
+				,"description" : "The provider's initial URL"	
+				,"type": "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank": "false"
+			 }
+			,{
+				 "name" : "URL 2"
+				,"field_name" : "url2"	
+				,"description" : "The provider's secondary URL"	
+				,"type": "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank": "false"
+			 }
 		]
 	}
 	,"nav_params" : {
 		 "remove_button_callback" : "Server.APIProviderManagement.Remove"
 		,"rename_button_callback" : "Server.APIProviderManagement.Rename"
 		,"query_callback" : "Server.APIProviderManagement.Query"
+		,"allow_create" : "true"
 	}
 }

@@ -32,7 +32,7 @@
 				,"subFields": [
 					 {
 						 "name" : "Content Full"
-						,"field_name" : "content.full"
+						,"field_name" : "full"
 						,"description": "Full Content"
 						,"type" : "text"
 						,"required" : "true"
@@ -42,7 +42,7 @@
 					,
 					 {
 						 "name" : "Content short"
-						,"field_name" : "content.short"
+						,"field_name" : "short"
 						,"description": "Abbreviated Content"
 						,"type" : "text"
 						,"required" : "true"
