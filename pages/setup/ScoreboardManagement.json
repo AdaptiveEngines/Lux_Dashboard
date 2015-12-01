@@ -3,15 +3,10 @@
 	,"main_section_lib" : "TableMain"
 	,"main_section_params" :{
 		 "save_button_callback" : "Server.ScoreboardManagement.Save"
-		,"fields" : [
-			{
-			}
-		]
 	}
 	,"nav_params" : {
 		 "allow_remove" : "false"
 		,"allow_rename" : "false"
-		,"allow_filter_field" : "username"
 		,"query_callback" : "Server.ScoreboardManagement.Query"
 	}
 }

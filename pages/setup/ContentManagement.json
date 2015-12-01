@@ -22,6 +22,45 @@
 				,"exclude_if_blank" : "true"
 			 }
 			,{
+				 "name" : "Header"
+				,"field_name" : "header"
+				,"description": "Header for this section"
+				,"type" : ""
+				,"required" : "false"
+				,"hidden" : "true"
+				,"exclude_if_blank" : "true"
+				,"subFields": [
+					 {
+						 "name" : "Header Text"
+						,"field_name" : "text"
+						,"description": "The Text of the Header"
+						,"type" : "text"
+						,"required" : "true"
+						,"hidden" : "false"
+						,"exclude_if_blank" : "true"
+					 }
+					,{
+						 "name" : "Sub Heading"
+						,"field_name" : "sub"
+						,"description": "Sub Heading for this section"
+						,"type" : "text"
+						,"required" : "false"
+						,"hidden" : "false"
+						,"exclude_if_blank" : "true"
+					 }
+					,{
+						 "name" : "URL Safe Header"
+						,"field_name" : "url_safe"
+						,"description": "A url Safe Header for direct access"
+						,"type" : "text"
+						,"required" : "false"
+						,"hidden" : "false"
+						,"exclude_if_blank" : "true"
+					 }
+
+				]
+			 }
+			,{
 				 "name" : "Content"
 				,"field_name" : "content"
 				,"description": "Content for this section"
@@ -53,7 +92,24 @@
 
 				]
 			 }	
-	
+			,{
+				 "name" : "File Name"
+				,"field_name" : "file_name"
+				,"description" : "File to upload"
+				,"type" : "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank" : "true"
+			 }
+			,{
+				 "name" : "Picture Content"
+				,"field_name" : "file"
+				,"description": "Picture Content for this section"
+				,"type" : "file"
+				,"required" : "false"
+				,"hidden" : "false"
+				,"exclude_if_blank" : "true"
+			 }
 		]
 	}
 	,"nav_params" : {

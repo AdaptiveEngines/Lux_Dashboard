@@ -11,11 +11,39 @@
 				,"hidden" : "true"
 				,"exclude_if_blank" : "true"
 			 }
+			,{
+				 "name" : "Rule Name"
+				,"field_name" : "rule_name"
+				,"description" : "Name of the Rule"
+				,"type" : "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank" : "true"
+			 }
+			,{
+				 "name" : "Rule Reward"
+				,"field_name" : "rule_reward"
+				,"description" : "Number of plums to award if this rule is met"
+				,"type" : "number"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank" : "true"
+			 }
+			,{
+				 "name" : "Rule Description"
+				,"field_name" : "rule_desc"
+				,"description" : "Description of the Rule"
+				,"type" : "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank" : "true"
+			 }
 		]
 	}
 	,"nav_params" : {
 		 "remove_button_callback" : "Server.SystemRules.Remove"
 		,"rename_button_callback" : "Server.SystemRules.Rename"
+		,"navigation_field" : "rule_name"
 		,"query_callback" : "Server.SystemRules.Query"
 	}
 }

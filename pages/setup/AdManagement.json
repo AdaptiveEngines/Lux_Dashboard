@@ -3,7 +3,6 @@
 	,"main_section_params" :{
 		 "save_button_callback" : "Server.AdManagement.Save"
 		,"asset_category" : "Adverts"
-		,"navigation_field" : "ad_id"
 		,"fields" : [
 			{
 				 "name" : "_id"
@@ -49,10 +48,29 @@
 				,"hidden" : "false"
 				,"exclude_if_blank": "false"
 			 }
+			,{
+				 "name" : "File"
+				,"field_name" : "file"	
+				,"description" : "File Associated with this Advert"	
+				,"type": "file"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank": "false"
+			 }
+			,{
+				 "name" : "File Name"
+				,"field_name" : "file_name"	
+				,"description" : "The name of the file being uploaded" 
+				,"type": "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank": "false"
+			 }
 		]
 	}
 	,"nav_params" : {
 		 "remove_button_callback" : "Server.AdManagement.Remove"
+		,"navigation_field" : "ad_id"
 		,"rename_button_callback" : "Server.AdManagement.Rename"
 		,"query_callback" : "Server.AdManagement.Query"
 	}

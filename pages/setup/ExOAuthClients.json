@@ -11,11 +11,59 @@
 				,"hidden" : "true"
 				,"exclude_if_blank" : "true"
 			 }
+			,{
+				 "name" : "Client Name"
+				,"field_name" : "client_name"
+				,"description" : "The Name of the externally authorized Application"
+				,"type" : "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank" : "false"
+			 }
+			,{
+				 "name" : "Client Description"
+				,"field_name" : "client_name"
+				,"description" : "A description of the externally authorized application"
+				,"type" : "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank" : "false"
+			 }
+			,{
+				 "name" : "Client Redirect URI"
+				,"field_name" : "redirect_uri"
+				,"description" : "Registered External redirect URI"
+				,"type" : "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank" : "false"
+			 }
+			,{
+				 "name" : "Client ID"
+				,"field_name" : "client_id"
+				,"description" : "Non-Editable Client_id"
+				,"type" : "text"
+				,"required" : "false"
+				,"readonly" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank" : "false"
+			 }
+			,{
+				 "name" : "Client Secret"
+				,"field_name" : "client_secret"
+				,"description" : "Non-Editable Client_Secret"
+				,"type" : "text"
+				,"required" : "false"
+				,"readonly" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank" : "false"
+			 }
 		]
 	}
 	,"nav_params" : {
 		 "remove_button_callback" : "Server.ExOAuthClients.Remove"
 		,"rename_button_callback" : "Server.ExOAuthClients.Rename"
+		,"navigation_field" : "client_name"
 		,"query_callback" : "Server.ExOAuthClients.Query"
 	}
 }

@@ -12,11 +12,21 @@
 				,"hidden" : "true"
 				,"exclude_if_blank" : "true"
 			 }
+			,{
+				 "name" : "Asset Name"
+				,"description": "The Required name of the Asset (used for identification"
+				,"field_name" : "asset_name"		
+				,"type" : "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank" : "false"
+			 }
 		]
 	}
 	,"nav_params" : {
 		 "remove_button_callback" : "Server.AssetManagement.Remove"
 		,"rename_button_callback" : "Server.AssetManagement.Rename"
+		,"navigation_field" : "asset_name"
 		,"query_callback" : "Server.AssetManagement.Query"
 	}
 }

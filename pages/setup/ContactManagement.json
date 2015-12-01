@@ -2,7 +2,6 @@
 	 "placement" : "ContactManagement"
 	,"main_section_params" :{
 		 "save_button_callback" : "Server.ContactManagement.Save"
-		,"navigation_field" : "email_id"
 		,"fields" : [
 			{
 				 "name" : "_id"
@@ -23,7 +22,7 @@
 			 }
 			,{
 				 "name" : "Send To"
-				,"field_name" : "to"
+				,"field_name" : "address"
 				,"description" :"Comma Seperated list of administrator emails who should recieve a notification"	
 				,"type": "text"
 				,"required" : "true"
@@ -31,18 +30,9 @@
 				,"exclude_if_blank": "false"
 			 }
 			,{
-				 "name" : "Subject"
-				,"field_name" : "subject"
-				,"description" :"The Subject line of the email being sent to administrators"
-				,"type": "text"
-				,"required" : "true"
-				,"hidden" : "false"
-				,"exclude_if_blank": "false"
-			 }
-			,{
-				 "name" : "Message"
-				,"field_name" : "message"
-				,"description" :"The message that will be sent along with the email"	
+				 "name" : "Sender"
+				,"field_name" : "sender"
+				,"description" :"The apperent sender of the email"
 				,"type": "text"
 				,"required" : "true"
 				,"hidden" : "false"
@@ -53,6 +43,7 @@
 	,"nav_params" : {
 		 "remove_button_callback" : "Server.ContactManagement.Remove"
 		,"rename_button_callback" : "Server.ContactManagement.Rename"
+		,"navigation_field" : "email_id"
 		,"query_callback" : "Server.ContactManagement.Query"
 	}
 }

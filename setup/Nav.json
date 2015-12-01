@@ -6,7 +6,7 @@
 	 }
 	,{
 		 "name": "Management Section"
-		,"base": "management"
+		,"base": "Management"
 		,"description": "All standard Management Items"
 		,"elements": [
 				 {
@@ -33,7 +33,7 @@
 	 } 
 	,{
 		 "name": "Plum"
-		,"base": "plum"
+		,"base": "Plum"
 		,"description": "Elements Specific to Plum Project"
 		,"elements": [
 				 {
@@ -53,13 +53,14 @@
 				 }
 				,{
 					 "name": "Plum Barter System"
-					,"base": ""
+					,"base": "Barter"
 					,"description": "" 
 				 }
 			]
 	 }
 	,{
 		 "name": "System"
+		,"base": "System"
 		,"elements": [
 				 {
 					 "name": "System Rules"
@@ -76,11 +77,6 @@
 					,"base": "ContactManagement"
 					,"description": "" 
 				 }
-				,{
-					 "name": "System Mailing"
-					,"base": "MailManagement"
-					,"description": "" 
-				 }
 			]
 	 }
 	,{
@@ -90,6 +86,7 @@
 	 }
 	,{
 		 "name": "User"
+		,"base": "User"
 		,"elements": [
 				 {
 					 "name": "User Scoreboard"
@@ -108,10 +105,4 @@
 				 }
 			]
 	 }
-	,{
-		 "name": "Orders"
-		,"base": "OrderManagement"
-		,"description": ""
-	 }
-	
 ]

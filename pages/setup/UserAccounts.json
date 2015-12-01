@@ -6,16 +6,57 @@
 			{
 				 "name" : "_id"
 				,"field_name" : "_id"
+				,"description" : "User's Unique system identifier"
 				,"type" : "_id"
 				,"required" : "true"
-				,"hidden" : "true"
+				,"readonly" : "true"
+				,"hidden" : "false"
 				,"exclude_if_blank" : "true"
 			 }
+			,{
+				 "name" : ""
+				,"field_name" : "system_info"
+				,"description" : ""
+				,"type" : ""
+				,"required" : "false"
+				,"hidden" : "true"
+				,"exclude_if_blank" : "true"
+				,"subFields" : [
+					 {
+						 "name" : "Username"
+						,"field_name" : "user"
+						,"description" : "User's Unique Identifying name"
+						,"type" : "text"
+						,"required" : "true"
+						,"hidden" : "false"
+						,"exclude_if_blank" : "true"
+					 }
+					,{
+						 "name" : "Email"
+						,"field_name" : "email"
+						,"description" : "User's Email Address"
+						,"type" : "text"
+						,"required" : "true"
+						,"hidden" : "false"
+						,"exclude_if_blank" : "true"
+					 }
+					,{
+						 "name" : "Role"
+						,"field_name" : "role"
+						,"description" : "User's Role (1=user, 5=admin)"
+						,"type" : "number"
+						,"required" : "true"
+						,"hidden" : "false"
+						,"exclude_if_blank" : "true"
+					 }
+				]
+			}
 		]
 	}
 	,"nav_params" : {
 		 "allow_remove" : "false"
 		,"allow_rename" : "false"
+		,"navigation_field" : "user"
 		,"allow_filter_field" : "username"
 		,"query_callback" : "Server.UserAccounts.Query"
 	}
