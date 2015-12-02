@@ -1,0 +1,33 @@
+{
+	 "placement" : "Barter"
+	,"main_section_lib" : "GroupChatMain"
+	,"main_section_params" :{
+		 "save_button_callback" : "Server.GroupManagement.Save"
+		,"switch_to_chat" : "true"
+		,"asset_category" : "Adverts"
+		,"fields" : [
+			{
+				 "name" : "_id"
+				,"field_name" : "_id"		
+				,"type": "_id"
+				,"required" : "true"
+				,"hidden" : "true"
+				,"exclude_if_blank": "true"
+			 },
+			 {
+				 "name" : "Group Name"
+				,"field_name" : "group_name"		
+				,"type": "text"
+				,"required" : "true"
+				,"hidden" : "false"
+				,"exclude_if_blank": "true"
+			 }
+		]
+	}
+	,"nav_params" : {
+		 "remove_button_callback" : "Server.GroupManagement.Remove"
+		,"navigation_field" : "group_name"
+		,"rename_button_callback" : "Server.GroupManagement.Rename"
+		,"query_callback" : "Server.GroupManagement.Query"
+	}
+}
